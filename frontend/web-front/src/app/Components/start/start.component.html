@@ -1,0 +1,93 @@
+<body>
+    
+    
+  <div class="prvi">
+    <div *ngIf="selektovano==1">
+      <button type="button" class="btn btn-primary" style="margin-right: 2%" (click)="DugmePrijava()">Prijava</button>
+      <button type="button" class="btn btn-outline-primary" (click)="DugmeRegistracija()">Registracija</button>
+    </div>
+    <div *ngIf="selektovano==2">
+      <button type="button" class="btn btn-outline-primary" style="margin-right: 2%"
+        (click)="DugmePrijava()">Prijava</button>
+      <button type="button" class="btn btn-primary" (click)="DugmeRegistracija()">Registracija</button>
+    </div>
+  </div>
+
+  <div *ngIf="selektovano==1">
+    <div class="d">
+
+      
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><img src="../../../assets/customer.png"></span>
+        </div>
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Username" [(ngModel)]="usernameLogIn">
+      </div>
+      <br>
+      
+      
+      
+      
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><img src="../../../assets/key.png"></span>
+        </div>
+        <input type="password" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Password" [(ngModel)]="passwordLogIn">
+      </div>
+      <br>
+
+      <button type="button" class="btn btn-outline-primary" (click)="Prijavi()">Prijavi se</button>
+
+    </div>
+  </div>
+
+  <div *ngIf="selektovano==2">
+
+    <div class="d">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text bg-primary" id="inputGroup-sizing-default">Ime i prezime</span>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]="korisnik.ime">
+            <input type="text" class="form-control" [(ngModel)]="korisnik.prezime">
+          </div>
+          
+          <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-primary" id="inputGroup-sizing-default">Email</span>
+              </div>
+              <input type="text" class="form-control" [(ngModel)]="korisnik.email">
+            </div>
+            <p>{{losEmail}}</p>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-primary" id="inputGroup-sizing-default">Korisnicko ime</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="korisnik.korisnicko_ime">
+        
+      </div>
+      
+      <p>{{losUsername}}</p>
+      
+      
+      
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-primary" id="inputGroup-sizing-default">Lozinka</span>
+        </div>
+        <input type="password" class="form-control" [(ngModel)]="korisnik.lozinka">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-primary" id="inputGroup-sizing-default">Potvrda lozinke</span>
+          </div>
+          <input type="password" class="form-control" [(ngModel)]="korisnik.lozinka_potvrda">
+        </div>
+        <p style="text-align: left">{{nePoklavapnjeLozinki}}</p>
+      <br>
+
+      <button type="button" class="btn btn-outline-primary" (click)="Registruj()">Registruj se</button>
+
+    </div>
+  </div>
+</body>

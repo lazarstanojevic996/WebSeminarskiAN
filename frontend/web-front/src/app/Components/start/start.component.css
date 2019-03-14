@@ -1,0 +1,57 @@
+body{
+    
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.prvi button{
+    width: 30%;
+    margin-top: 3%;
+}
+
+form{
+    
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+.d{
+    margin: auto;
+    width: 40%;
+    margin-top: 5%;
+}
+
+.bg-primary{
+    color: white;
+    width: 100%;
+    
+}
+/*
+.input-group-prepend{
+    width: 30%;
+    border-top-left-radius: 12%;
+    border-bottom-left-radius: 12%;
+}
+.input-group-text{
+    width: 100%;
+}
+
+.input-group{
+    border-top-left-radius: 12%;
+    border-bottom-left-radius: 12%;
+}*/
+
+p{
+    text-align: left;
+    color: red;
+    font: 70%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5rem !important;
+}
+.input-group{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

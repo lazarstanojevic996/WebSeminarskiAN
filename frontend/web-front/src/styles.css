@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body 
+{ 
+    
+    margin: auto; 
+    
+}
+
+html{
+    background-color: gray;
+}
+
+body 
+{ 
+    height: auto;
+    width: 60%; 
+    margin: auto; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: white;
+    /*padding-bottom: 15vh;*/
+}
+
+.b {
+    height: 100%;
+}

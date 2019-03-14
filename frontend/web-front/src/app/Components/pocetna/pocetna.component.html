@@ -1,0 +1,59 @@
+<div class="odjava" *ngIf="idKorisnika!=null">
+  <button type="button" class="btn btn-outline-secondary" (click)="OdjaviSe()">Odjavi se</button>
+</div>
+<div class="b">
+ 
+    <h1 style="text-align: center">{{doba}}{{korisnik.ime}} {{korisnik.prezime}}</h1>
+  <div class="container">
+    <div class="row rounded-top izmeni">
+      <div class="col" (click)="DodajTask()">
+        Dodaj novi zadatak
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngFor="let zadatak of zadaci">
+
+    
+    <div class="row rounded-top">
+      <div class="col">
+        <label>Naslov:</label>
+        <br />
+        <h4>{{zadatak.naslov}}</h4>
+      </div>
+      <div class="col" style="border-left: 1px solid #3c495e;">
+        <label>Datum:</label>
+        <br />
+        <h4>{{zadatak.datum | date}}</h4>
+      </div>
+      
+    </div>
+    <!-- slide down -->
+    <div class="row" *ngIf="selektovan!=zadatak.id_zadatka">
+      <div class="col tekst slika" (click)="Otvori(zadatak.id_zadatka)">
+        <img src="../../../assets/double_down.png" style="margin:auto !important;">
+      </div>
+    </div>
+    <!--slide up-->
+    <div class="row" *ngIf="selektovan==zadatak.id_zadatka">
+      <div class="col tekst">
+        <label>Zadatak:</label>
+        <br />
+        {{zadatak.tekst}}
+      </div>
+    </div>
+    <div class="row " *ngIf="selektovan==zadatak.id_zadatka">
+      <div class="col zatvori" (click)="ZatvoriTask(zadatak.id_zadatka)">
+        <p>Zatvori</p>
+      </div>
+      <div class="col izmeni" style="border-left: 1px solid #3c495e;" (click)="IzmeniTask(zadatak.id_zadatka)">
+        <p>Izmeni</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="selektovan==zadatak.id_zadatka">
+      <div class="col tekst slika" (click)="Zatvori()">
+        <img src="../../../assets/double_up.png" style="margin:auto !important;">
+      </div>
+    </div>
+  </div>
+
+</div>
